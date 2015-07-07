@@ -5,24 +5,24 @@ CC = gcc
 CFLAGS = -g -O2 -Wall -fno-builtin
 AR = ar
 RANLIB = ranlib
-INCS = mconf.h
+INCS = src/mconf.h
 AS = as
 
-OBJS = acosh.o airy.o asin.o asinh.o atan.o atanh.o bdtr.o beta.o \
-btdtr.o cbrt.o chbevl.o chdtr.o clog.o cmplx.o const.o \
-cosh.o dawsn.o drand.o ellie.o ellik.o ellpe.o ellpj.o ellpk.o \
-exp.o exp10.o exp2.o expn.o fabs.o fac.o fdtr.o \
-fresnl.o gamma.o gdtr.o hyp2f1.o hyperg.o i0.o i1.o igami.o \
-incbet.o incbi.o igam.o isnan.o iv.o j0.o j1.o jn.o jv.o k0.o k1.o \
-kn.o log.o log2.o log10.o lrand.o nbdtr.o ndtr.o ndtri.o pdtr.o \
-polevl.o polmisc.o polyn.o pow.o powi.o psi.o rgamma.o round.o \
-shichi.o sici.o sin.o sindg.o sinh.o spence.o stdtr.o struve.o \
-tan.o tandg.o tanh.o unity.o yn.o zeta.o zetac.o \
-sqrt.o floor.o setprec.o mtherr.o
+OBJS = src/acosh.o src/airy.o src/asin.o src/asinh.o src/atan.o src/atanh.o src/bdtr.o src/beta.o \
+src/btdtr.o src/cbrt.o src/chbevl.o src/chdtr.o src/clog.o src/cmplx.o src/const.o \
+src/cosh.o src/dawsn.o src/drand.o src/ellie.o src/ellik.o src/ellpe.o src/ellpj.o src/ellpk.o \
+src/exp.o src/exp10.o src/exp2.o src/expn.o src/fabs.o src/fac.o src/fdtr.o \
+src/fresnl.o src/gamma.o src/gdtr.o src/hyp2f1.o src/hyperg.o src/i0.o src/i1.o src/igami.o \
+src/incbet.o src/incbi.o src/igam.o src/isnan.o src/iv.o src/j0.o src/j1.o src/jn.o src/jv.o src/k0.o src/k1.o \
+src/kn.o src/log.o src/log2.o src/log10.o src/lrand.o src/nbdtr.o src/ndtr.o src/ndtri.o src/pdtr.o \
+src/polevl.o src/polmisc.o src/polyn.o src/pow.o src/powi.o src/psi.o src/rgamma.o src/round.o \
+src/shichi.o src/sici.o src/sin.o src/sindg.o src/sinh.o src/spence.o src/stdtr.o src/struve.o \
+src/tan.o src/tandg.o src/tanh.o src/unity.o src/yn.o src/zeta.o src/zetac.o \
+src/sqrt.o src/floor.o src/setprec.o src/mtherr.o
 
 all: libmd.a
 
-#mtst dtestvec dcalc paranoia # stamp-timing
+#mtst dtestvec dcalc para
 
 stamp-timing: libmd.a mtst time-it
 	time-it "mtst > /dev/null"
