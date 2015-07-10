@@ -66,7 +66,7 @@ extern void cmul ( cmplx *a, cmplx *b, cmplx *c );
 extern void cdiv ( cmplx *a, cmplx *b, cmplx *c );
 extern void cmov ( void *a, void *b );
 extern void cneg ( cmplx *a );
-__declspec (dllexport) double cabs ( cmplx *z );
+/* __declspec (dllexport) double cabs ( cmplx *z ); */
 extern void csqrt ( cmplx *z, cmplx *w );
 extern double hypot ( double x, double y );
 extern double cosh ( double x );
